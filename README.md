@@ -1,4 +1,4 @@
-# Kafka Basic Commands
+# Kafka command
 
 ## Start the Zookeper service
 ```bash
@@ -23,4 +23,4 @@ bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server local
 ## Read from Topic
 ```bash
 bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
-```"# Kafka_command" 
+```
