@@ -1,4 +1,4 @@
-# Kafka command
+# Kafka Commands
 
 ## Start the Zookeper service
 ```bash
