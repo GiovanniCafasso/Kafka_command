@@ -39,8 +39,8 @@ In config folder duplicate config.properties and set new name (config-2.properti
 
 ### Edit these rows
 1. broker.id=0  --> broker.id=2
-2. listeners=PLAINTEXT://:9092 --> listeners=PLAINTEXT://:9093
-3. log.dirs=/tmp/kafka-logs --> log.dirs=/tmp/kafka-logs-2
+1. listeners=PLAINTEXT://:9092 --> listeners=PLAINTEXT://:9093
+1. log.dirs=/tmp/kafka-logs --> log.dirs=/tmp/kafka-logs-2
 
 ### Run the new server
 ```bash
