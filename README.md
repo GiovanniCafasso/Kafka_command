@@ -2,7 +2,7 @@
 
 ## Start the Zookeper service
 ```bash
-$ bin/zookeeper-server-start.sh config/zookeeper.properties
+bin/zookeeper-server-start.sh config/zookeeper.properties
 ```
 
 ## Start kafka broker service
