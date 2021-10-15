@@ -52,3 +52,22 @@ bin/kafka-server-start.sh config/server-2.properties
 bin/kafka-configs.sh --bootstrap-server localhost:9092 --entity-type topics --entity-name myTopic --alter --add-config min.insync.replicas=2
 ```
 
+# Manage cosumer
+
+### Consume messages partition by partition
+Specific the correct number of partition (ex: ``` --partition 0``` )
+```bash
+bin/kafka-console-consumer.sh --topic my-partitioned-topic --from-beginning --partition `<number>` --bootstrap-server localhost:9092
+```
+
+### Start multiple consumers in a single group
+Run this command as time as you need
+```bash
+bin/kafka-console-consumer.sh --topic my-partitioned-topic --group my-consumer-group --bootstrap-server localhost:9092
+```
+
+### Receive messages from a specific offset of a single partition
+Specific the correct number of offset (ex: ``` --offset 1``` )and the correct number of partition (ex: ``` --partition 1``` )
+```bash
+bin/kafka-console-consumer.sh --topic my-partitioned-topic --offset `<number>` --partition `<number>` --bootstrap-server localhost:9092
+```
