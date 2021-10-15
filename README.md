@@ -55,7 +55,7 @@ bin/kafka-configs.sh --bootstrap-server localhost:9092 --entity-type topics --en
 # Manage cosumer
 
 ### Consume messages partition by partition
-Specific the correct number of partition (ex: ``` --partition 0``` )
+Specific the correct number of the partition (ex: ``` --partition 0``` )
 ```bash
 bin/kafka-console-consumer.sh --topic my-partitioned-topic --from-beginning --partition `<number>` --bootstrap-server localhost:9092
 ```
@@ -67,7 +67,7 @@ bin/kafka-console-consumer.sh --topic my-partitioned-topic --group my-consumer-g
 ```
 
 ### Receive messages from a specific offset of a single partition
-Specific the correct number of offset (ex: ``` --offset 1``` )and the correct number of partition (ex: ``` --partition 1``` )
+Specific the correct number of the offset (ex: ``` --offset 1``` )and the correct number of the partition (ex: ``` --partition 1``` )
 ```bash
 bin/kafka-console-consumer.sh --topic my-partitioned-topic --offset `<number>` --partition `<number>` --bootstrap-server localhost:9092
 ```
