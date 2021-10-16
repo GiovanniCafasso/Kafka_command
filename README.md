@@ -11,6 +11,7 @@ bin/kafka-server-start.sh config/server.properties
 ```
 
 ### Create a Topic
+Specificthe correct number of replication factors (ex: ``` --replication-factor 1``` ) and the correct number of partitions (ex: ``` --partition 1``` )
 ```bash
 bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1
 ```
@@ -21,6 +22,7 @@ bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server local
 ```
 
 ### Read from Topic
+Consumer start reading from beginning 
 ```bash
 bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
 ```
@@ -43,6 +45,7 @@ In config folder duplicate config.properties and set new name (config-2.properti
 1. log.dirs=/tmp/kafka-logs --> log.dirs=/tmp/kafka-logs-2
 
 ### Run the new server
+Specific the correct name of properties (ex: ``` server-2.properties``` )
 ```bash
 bin/kafka-server-start.sh config/server-2.properties
 ```
@@ -57,7 +60,7 @@ bin/kafka-configs.sh --bootstrap-server localhost:9092 --entity-type topics --en
 ### Consume messages partition by partition
 Specific the correct number of the partition (ex: ``` --partition 0``` )
 ```bash
-bin/kafka-console-consumer.sh --topic my-partitioned-topic --from-beginning --partition `<number>` --bootstrap-server localhost:9092
+bin/kafka-console-consumer.sh --topic my-partitioned-topic --from-beginning --partition 0 --bootstrap-server localhost:9092
 ```
 
 ### Start multiple consumers in a single group
@@ -69,5 +72,5 @@ bin/kafka-console-consumer.sh --topic my-partitioned-topic --group my-consumer-g
 ### Receive messages from a specific offset of a single partition
 Specific the correct number of the offset (ex: ``` --offset 1``` )and the correct number of the partition (ex: ``` --partition 1``` )
 ```bash
-bin/kafka-console-consumer.sh --topic my-partitioned-topic --offset `<number>` --partition `<number>` --bootstrap-server localhost:9092
+bin/kafka-console-consumer.sh --topic my-partitioned-topic --offset 1 --partition 1 --bootstrap-server localhost:9092
 ```
