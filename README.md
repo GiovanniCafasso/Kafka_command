@@ -11,7 +11,7 @@ bin/kafka-server-start.sh config/server.properties
 ```
 
 ### Create a Topic
-Specificthe correct number of replication factors (ex: ``` --replication-factor 1``` ) and the correct number of partitions (ex: ``` --partition 1``` )
+Specific the correct number of replication factors (ex: ``` --replication-factor 1``` ) and the correct number of partitions (ex: ``` --partition 1``` )
 ```bash
 bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1
 ```
