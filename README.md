@@ -16,7 +16,7 @@ Specific the correct number of replication factors (ex: ``` --replication-factor
 bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1
 ```
 
-## Write on Topic
+### Write on Topic
 ```bash
 bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
 ```
